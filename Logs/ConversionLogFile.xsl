@@ -66,37 +66,21 @@
 		<tr class="TableContent">
 			<td align="center" class="TableContent">
 				<p>
-					<xsl:choose>
-						<xsl:when test="$vendor='Microsoft'">
-						<xsl:attribute name="class">
-							<xsl:choose>
-								<xsl:when test="@MessageClass = 'Error'">TableGraphicError</xsl:when>
-								<xsl:when test="@MessageClass = 'ErrorCritical'">TableGraphicErrorCritical</xsl:when>
-								<xsl:when test="@MessageClass = 'Information'">TableGraphicInformation</xsl:when>
-								<xsl:when test="@MessageClass = 'Success'">TableGraphicSuccess</xsl:when>
-								<xsl:when test="@MessageClass = 'Warning'">TableGraphicWarning</xsl:when>
-								<xsl:otherwise>TableContent</xsl:otherwise>
-							</xsl:choose>
-						</xsl:attribute>&#160;
-					</xsl:when>
-					<xsl:otherwise>
-						<img class="TableGraphic">
-							<xsl:attribute name="alt">
-								<xsl:value-of select="@MessageClass"/>
-							</xsl:attribute>
-							<xsl:attribute name="src">
-								<xsl:choose>
-									<xsl:when test="@MessageClass = 'Error'">ICO_PE_InfoError.png</xsl:when>
-									<xsl:when test="@MessageClass = 'ErrorCritical'">ICO_PE_InfoErrorCritical.png</xsl:when>
-									<xsl:when test="@MessageClass = 'Information'">ICO_PE_InfoInformation.png</xsl:when>
-									<xsl:when test="@MessageClass = 'Success'">ICO_PE_InfoSuccess.png</xsl:when>
-									<xsl:when test="@MessageClass = 'Warning'">ICO_PE_InfoWarning.png</xsl:when>
-									<xsl:otherwise>TableContent</xsl:otherwise>
-								</xsl:choose>
-							</xsl:attribute>
-						</img>
-					</xsl:otherwise>
-					</xsl:choose>
+				  <img class="TableGraphic">
+					  <xsl:attribute name="alt">
+						  <xsl:value-of select="@MessageClass"/>
+					  </xsl:attribute>
+					  <xsl:attribute name="src">
+						  <xsl:choose>
+							  <xsl:when test="@MessageClass = 'Error'">ICO_PE_InfoError.png</xsl:when>
+							  <xsl:when test="@MessageClass = 'ErrorCritical'">ICO_PE_InfoErrorCritical.png</xsl:when>
+							  <xsl:when test="@MessageClass = 'Information'">ICO_PE_InfoInformation.png</xsl:when>
+							  <xsl:when test="@MessageClass = 'Success'">ICO_PE_InfoSuccess.png</xsl:when>
+							  <xsl:when test="@MessageClass = 'Warning'">ICO_PE_InfoWarning.png</xsl:when>
+							  <xsl:otherwise>TableContent</xsl:otherwise>
+						  </xsl:choose>
+					  </xsl:attribute>
+				  </img>
 				</p>
 			</td>
 			<td align="left" class="TableContent">
